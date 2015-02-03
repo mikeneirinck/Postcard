@@ -46,6 +46,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AlbertEinsteinStamp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="t2F-9Y-hQI">
+                                <rect key="frame" x="463" y="165" width="80" height="80"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="257" y="165" width="80" height="80"/>
+                                </variation>
+                            </imageView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Geg-Zt-bxF">
                                 <rect key="frame" x="31" y="89" width="512" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -81,20 +87,34 @@
                                     <action selector="sendMailButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ghx-90-fcY"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AlbertEinsteinStamp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="t2F-9Y-hQI">
-                                <rect key="frame" x="463" y="165" width="80" height="80"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZP-OC-LLg">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="257" y="165" width="80" height="80"/>
+                                    <rect key="frame" x="31" y="186" width="207" height="21"/>
                                 </variation>
-                            </imageView>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="vZP-OC-LLg"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="vZP-OC-LLg"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="enterMessageTextField" destination="T3p-Sa-HQU" id="9vi-bq-ScR"/>
                         <outlet property="enterNameTextField" destination="KnK-JU-uj4" id="eT3-An-2MN"/>
                         <outlet property="mailButton" destination="qUf-22-POp" id="YMW-6P-RpD"/>
                         <outlet property="messageLabel" destination="Geg-Zt-bxF" id="eu7-GK-7eK"/>
+                        <outlet property="nameLabel" destination="vZP-OC-LLg" id="enK-JY-3vU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
